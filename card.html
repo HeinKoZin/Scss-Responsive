@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/card.css">
+</head>
+<body>
+
+    <div class="bg"></div>
+    <div id="menu" class="close">
+        <div id="menuButton">&#9776;</div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Google_Assistant_logo.svg" alt="">
+        <p>Google Assistant</p>
+        <div class="menuItems">
+            <ul>
+                <li>Home</li>
+                <li>Service</li>
+                <li>About</li>
+                <li>Contact us</li>
+            </ul>
+        </div>
+        
+    </div>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Google_Assistant_logo.svg" alt="" class="brand">
+    <a href="" class="title">Google Assistant</a>
+
+    <div class="parent">
+        
+        <div class="div1">
+            <h1>
+                Your Virtual Assistant
+            </h1>
+            <a href="">Get Help</a>
+        </div>
+        <div class="div2">
+            <ul>
+                <li><span></span><strong>Best Virtual Assistant</strong></li>
+                <li><span></span><strong>More exect</strong></li>
+                <li><span></span><strong>More Privacy</strong></li>
+                
+
+            </ul>
+        </div>
+    </div>
+    <script src="./bower_components/jquery/dist/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            var isopen = false;
+            
+            $("#menuButton").click(function(){
+                if(!isopen){
+                    $("#menu").removeClass("close");
+                    $("#menu").addClass("open");
+                    $("#menuButton").html("&#215;");
+                    isopen = true;
+                }else{
+                    $("#menu").removeClass("open");
+                    $("#menu").addClass("close");
+                    $("#menuButton").html("&#9776;");
+                    isopen = false;
+                }
+                
+                
+            });
+        });
+    </script>
+    
+</body>
+</html>
